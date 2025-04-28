@@ -1,4 +1,9 @@
 {
+  "/(pages)/auth/about/page": "app/(pages)/auth/about/page.js",
+  "/(pages)/auth/contact/page": "app/(pages)/auth/contact/page.js",
+  "/(pages)/auth/home/page": "app/(pages)/auth/home/page.js",
   "/(pages)/auth/product/page": "app/(pages)/auth/product/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/page": "app/page.js"
 }
