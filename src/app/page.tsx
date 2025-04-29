@@ -1,6 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 
+
 const page = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false)
@@ -8,30 +9,30 @@ const page = () => {
    const furnitureItems = [
     {
       id: 1,
-      name: "Modern Sofa",
-      description: "Elegant mid-century modern sofa with premium upholstery",
-      image: "/public/assets/image1.png",
-      price: "$1,299"
+      name: "Modern T-srt",
+      description: "Elegant mid-century modern t-srt with premium upholstery",
+      image: "https://i.pinimg.com/originals/0d/44/7a/0d447aac0813d4c0d24302014438d4c5.png",
+      price: "$299"
     },
     {
       id: 2,
       name: "Scandinavian Armchair",
       description: "Minimalist design with exceptional comfort and durability",
-      image: "/public/assets/image1.png",
-      price: "$849"
+      image: "https://cdn11.bigcommerce.com/s-5x84n/images/stencil/original/products/9321/13301/Front__75377.1601915795.jpg?c=2",
+      price: "$149"
     },
     {
       id: 3,
-      name: "Walnut Dining Table",
+      name: "Walnut Dining T-srt",
       description: "Solid walnut dining table with extendable leaf design",
-      image: "/public/assets/image1.png",
-      price: "$1,599"
+      image: "https://cdn.shopify.com/s/files/1/1507/2042/products/Tan_Back_1_1024x1024.jpg?v=1606500157",
+      price: "$599"
     },
     {
       id: 4,
-      name: "King Size Bed Frame",
-      description: "Contemporary platform bed with integrated storage",
-      image: "/public/assets/image1.png",
+      name: "King Size T-srt",
+      description: "Contemporary platform t-srt with integrated storage",
+      image: "https://th.bing.com/th/id/OIP.twk68nfKmMYeqEkRepBPWwHaHa?w=500&h=500&rs=1&pid=ImgDetMain",
       price: "$1,899"
     }
   ];
@@ -87,10 +88,11 @@ const page = () => {
           >
             {/* Background image */}
             <div 
-              className="absolute inset-0 bg-cover bg-center "
+              className="absolute inset-0 bg-contain bg-no-repeat md:bg-center md:bg-repeat  md:bg-contain mt-14  md:mt-15 "
               style={{
                 backgroundImage: `url(${item.image})`,
-                filter: 'brightness(0.7)'
+                filter: 'brightness(0.7)',
+                
               }}
             />
             
@@ -98,7 +100,7 @@ const page = () => {
             <div className="absolute inset-0 flex items-center justify-center">
               
               <div className="max-w-2xl p-8 text-center text-white">
-                <h2 className="mb-2 text-5xl font-bold">{item.name}</h2>
+                <h2 className="mb-2 text-5xl font-bold ">{item.name}</h2>
                 <p className="mb-6 text-xl">{item.description}</p>
                 <div className="mb-8 text-3xl font-semibold">{item.price}</div>
                 <button className="rounded-md bg-white px-8 py-3 text-lg font-medium text-gray-900 transition hover:bg-gray-200">
@@ -145,7 +147,15 @@ const page = () => {
         ))}
       </div>
     </div>
-
+        <div className=' border-2 h-[100%] w-96 grid grid-cols-1'>
+          <ul>
+            <li>
+            <img src="/assets/Jai-Shree-Ram-T-shirt.png" alt="My Image" className=' object-contain' />
+            </li>
+          </ul>
+        <p>price</p>
+        </div>
+      
     </>
   )
 }

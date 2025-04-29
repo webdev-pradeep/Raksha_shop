@@ -628,6 +628,10 @@
     margin-top: calc(var(--spacing) * 2);
   }
 
+  .mt-5 {
+    margin-top: calc(var(--spacing) * 5);
+  }
+
   .mt-6 {
     margin-top: calc(var(--spacing) * 6);
   }
@@ -636,8 +640,24 @@
     margin-top: calc(var(--spacing) * 8);
   }
 
+  .mt-14 {
+    margin-top: calc(var(--spacing) * 14);
+  }
+
+  .mt-15 {
+    margin-top: calc(var(--spacing) * 15);
+  }
+
   .mt-16 {
     margin-top: calc(var(--spacing) * 16);
+  }
+
+  .mt-20 {
+    margin-top: calc(var(--spacing) * 20);
+  }
+
+  .mb-1 {
+    margin-bottom: calc(var(--spacing) * 1);
   }
 
   .mb-2 {
@@ -744,12 +764,20 @@
     height: calc(var(--spacing) * 70);
   }
 
+  .h-80 {
+    height: calc(var(--spacing) * 80);
+  }
+
   .h-96 {
     height: calc(var(--spacing) * 96);
   }
 
   .h-\[100\%\] {
     height: 100%;
+  }
+
+  .h-\[100px\] {
+    height: 100px;
   }
 
   .h-auto {
@@ -800,8 +828,28 @@
     width: calc(var(--spacing) * 52);
   }
 
-  .w-\[100\%\], .w-full {
+  .w-80 {
+    width: calc(var(--spacing) * 80);
+  }
+
+  .w-96 {
+    width: calc(var(--spacing) * 96);
+  }
+
+  .w-\[100\%\] {
     width: 100%;
+  }
+
+  .w-\[100px\] {
+    width: 100px;
+  }
+
+  .w-full {
+    width: 100%;
+  }
+
+  .w-screen {
+    width: 100vw;
   }
 
   .max-w-2xl {
@@ -1155,6 +1203,16 @@
     }
   }
 
+  .bg-conic-50 {
+    --tw-gradient-position: from 50deg in oklab;
+    background-image: conic-gradient(var(--tw-gradient-stops));
+  }
+
+  .bg-conic-150 {
+    --tw-gradient-position: from 150deg in oklab;
+    background-image: conic-gradient(var(--tw-gradient-stops));
+  }
+
   .bg-gradient-to-bl {
     --tw-gradient-position: to bottom left in oklab;
     background-image: linear-gradient(var(--tw-gradient-stops));
@@ -1168,22 +1226,6 @@
   .bg-gradient-to-r {
     --tw-gradient-position: to right in oklab;
     background-image: linear-gradient(var(--tw-gradient-stops));
-  }
-
-  .bg-\[url\(\/public\/assets\/\)\] {
-    background-image: url("/public/assets/");
-  }
-
-  .bg-\[url\(\/public\/assets\/https\:\/\/www\.bing\.com\/images\/search\?view\=detailV2\&ccid\=j4KdqaXp\&id\=6C2C346EC5C2814C1D0A575B215990737C00780D\&thid\=OIP\.j4KdqaXpnhbN94WzVyHUhAHaE8\&mediaurl\=https\%3a\%2f\%2fcdn\.photographylife\.com\%2fwp-content\%2fuploads\%2f2014\%2f06\%2fNikon-D810-Image-Sample-6\.jpg\&cdnurl\=https\%3a\%2f\%2fth\.bing\.com\%2fth\%2fid\%2fR\.8f829da9a5e99e16cdf785b35721d484\%3frik\%3dDXgAfHOQWSFbVw\%26pid\%3dImgRaw\%26r\%3d0\&exph\=1367\&expw\=2048\&q\=image\+\&simid\=608002400488918901\&FORM\=IRPRST\&ck\=69EFE41FE4308F8BFD7C928F6A9947B1\&selectedIndex\=0\&itb\=0\)\] {
-    background-image: url("/public/assets/https://www.bing.com/images/search?view=detailV2&ccid=j4KdqaXp&id=6C2C346EC5C2814C1D0A575B215990737C00780D&thid=OIP.j4KdqaXpnhbN94WzVyHUhAHaE8&mediaurl=https%3a%2f%2fcdn.photographylife.com%2fwp-content%2fuploads%2f2014%2f06%2fNikon-D810-Image-Sample-6.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.8f829da9a5e99e16cdf785b35721d484%3frik%3dDXgAfHOQWSFbVw%26pid%3dImgRaw%26r%3d0&exph=1367&expw=2048&q=image+&simid=608002400488918901&FORM=IRPRST&ck=69EFE41FE4308F8BFD7C928F6A9947B1&selectedIndex=0&itb=0");
-  }
-
-  .bg-\[url\(\/public\/assets\/https\:\/\/www\.bing\.com\/th\/id\/OIP\.cAobzB0mBSlBjpBXbNRdSwHaE7\?w\=244\&h\=211\&c\=8\&rs\=1\&qlt\=90\&o\=6\&pid\=3\.1\&rm\=2\)\] {
-    background-image: url("/public/assets/https://www.bing.com/th/id/OIP.cAobzB0mBSlBjpBXbNRdSwHaE7?w=244&h=211&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2");
-  }
-
-  .bg-\[url\(\/public\/assets\/image1\.png\)\] {
-    background-image: url("/public/assets/image1.png");
   }
 
   .bg-none {
@@ -1286,6 +1328,10 @@
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
 
+  .bg-contain {
+    background-size: contain;
+  }
+
   .bg-cover {
     background-size: cover;
   }
@@ -1294,12 +1340,20 @@
     background-position: center;
   }
 
+  .bg-no-repeat {
+    background-repeat: no-repeat;
+  }
+
   .object-contain {
     object-fit: contain;
   }
 
   .object-cover {
     object-fit: cover;
+  }
+
+  .object-fill {
+    object-fit: fill;
   }
 
   .p-1 {
@@ -1843,6 +1897,12 @@
   }
 
   @media (hover: hover) {
+    .hover\:text-blue-800:hover {
+      color: var(--color-blue-800);
+    }
+  }
+
+  @media (hover: hover) {
     .hover\:underline:hover {
       text-decoration-line: underline;
     }
@@ -1880,11 +1940,6 @@
 
   .focus\:ring-blue-500:focus {
     --tw-ring-color: var(--color-blue-500);
-  }
-
-  .focus\:ring-offset-2:focus {
-    --tw-ring-offset-width: 2px;
-    --tw-ring-offset-shadow: var(--tw-ring-inset, ) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   }
 
   .focus\:outline-none:focus {
@@ -1951,6 +2006,12 @@
   }
 
   @media (width >= 48rem) {
+    .md\:mt-15 {
+      margin-top: calc(var(--spacing) * 15);
+    }
+  }
+
+  @media (width >= 48rem) {
     .md\:flex {
       display: flex;
     }
@@ -1965,6 +2026,12 @@
   @media (width >= 48rem) {
     .md\:h-15 {
       height: calc(var(--spacing) * 15);
+    }
+  }
+
+  @media (width >= 48rem) {
+    .md\:h-96 {
+      height: calc(var(--spacing) * 96);
     }
   }
 
@@ -2086,6 +2153,24 @@
       .md\:border-black\/50 {
         border-color: color-mix(in oklab, var(--color-black) 50%, transparent);
       }
+    }
+  }
+
+  @media (width >= 48rem) {
+    .md\:bg-contain {
+      background-size: contain;
+    }
+  }
+
+  @media (width >= 48rem) {
+    .md\:bg-center {
+      background-position: center;
+    }
+  }
+
+  @media (width >= 48rem) {
+    .md\:bg-repeat {
+      background-repeat: repeat;
     }
   }
 
