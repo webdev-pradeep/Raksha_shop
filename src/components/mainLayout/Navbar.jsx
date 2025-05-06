@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <header className="h-16 bg-gray-800 text-gray-50 flex justify-between gap-5 items-center px-5">
-      <h2 className="text-2xl">Amazing Cart</h2>
+      <h2 className="text-2xl font-bold">Raksha shop</h2>
       <nav className="hidden md:flex gap-5">
         <Link href={"/"}>Home</Link>
         <Link href={"/shop"}>Shop</Link>

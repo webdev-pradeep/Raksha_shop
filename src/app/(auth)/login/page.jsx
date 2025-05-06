@@ -27,12 +27,12 @@ const LoginPage = () => {
     console.log("You are Log in Now");
   };
   return (
-    <div className="h-screen w-full flex justify-center items-center">
+    <div className="h-screen w-full flex justify-center items-center bg-gradient-to-t to-red-300 from-pink-400">
       <form
         onSubmit={login}
-        className="max-w-sm w-full rounded border border-gray-400 grid gap-2 p-4"
+        className="max-w-sm w-full rounded shadow-2xl border-2 border-white grid gap-2 p-4 bg-transparent"
       >
-        <h1 className="text-center mb-5 font-semibold text-3xl">Login</h1>
+        <h1 className="text-center mb-5 text-3xl font-bold">Login</h1>
         <input
           type="email"
           required
@@ -63,7 +63,7 @@ const LoginPage = () => {
         </div>
         <Link
           href="/forgot_password"
-          className="text-sm text-right text-blue-500"
+          className="text-ms text-right text-blue-500"
         >
           Forgot Password?
         </Link>

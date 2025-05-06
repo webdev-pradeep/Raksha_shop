@@ -23,14 +23,12 @@ const SignupPage = () => {
     console.log("Account Created");
   };
   return (
-    <div className="h-screen w-full flex justify-center items-center">
+    <div className="h-screen w-full flex justify-center items-center bg-gradient-to-t to-red-300  from-pink-400">
       <form
         onSubmit={signup}
-        className="max-w-sm w-full rounded border border-gray-400 grid gap-2 p-4"
+        className="max-w-sm w-full rounded border-2 shadow-2xl border-white grid gap-2 p-4"
       >
-        <h1 className="text-center mb-5 font-semibold text-3xl">
-          Create Account
-        </h1>
+        <h1 className="text-center mb-5  text-3xl font-bold">Create Account</h1>
 
         <input
           type="text"
