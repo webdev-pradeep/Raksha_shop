@@ -33,7 +33,7 @@ const HomePage = ()=>{
             children: "HomePage"
         }, void 0, false, {
             fileName: "[project]/src/app/(pages)/auth/home/page.tsx",
-            lineNumber: 6,
+            lineNumber: 7,
             columnNumber: 5
         }, this)
     }, void 0, false);
