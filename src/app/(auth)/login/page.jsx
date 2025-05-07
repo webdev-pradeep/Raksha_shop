@@ -2,6 +2,7 @@
 import { useRouter } from "next/navigation";
 import { useGlobalContext } from "../../../context/GlobalContext";
 import { setCookie } from "../../../utils/cookies";
+import { login } from "../../../utils/apiClient";
 import Link from "next/link";
 import { Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
@@ -22,20 +23,40 @@ const LoginPage = () => {
     return false;
   };
 
-  const login = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
     console.log("You are Log in Now");
+
+    try {
+      const res = await login({ email, password });
+      const data = await res.json();
+      console.log(data);
+      if (data.error) {
+        alert(data.message);
+        return;
+      }
+
+      setCookie("access_token", data.access_token);
+      setCookie("refresh_token", data.refresh_token);
+      setIsLogin(true);
+      setEmail("");
+      setPassword("");
+      router.push("/");
+    } catch (error) {
+      console.log(error);
+    }
   };
   return (
     <div className="h-screen w-full flex justify-center items-center bg-gradient-to-t to-red-300 from-pink-400">
       <form
-        onSubmit={login}
+        onSubmit={handleLogin}
         className="max-w-sm w-full rounded shadow-2xl border-2 border-white grid gap-2 p-4 bg-transparent"
       >
         <h1 className="text-center mb-5 text-3xl font-bold">Login</h1>
         <input
           type="email"
           required
+          value={email}
           placeholder="email"
           className="border outline-none rounded px-2 py-1.5"
           onChange={(e) => setEmail(e.target.value)}
@@ -45,6 +66,7 @@ const LoginPage = () => {
             type={isPassword ? "password" : "text"}
             required
             placeholder="Password"
+            value={password}
             className="border outline-none rounded px-2 py-1.5 w-full"
             onChange={(e) => setPassword(e.target.value)}
           />
