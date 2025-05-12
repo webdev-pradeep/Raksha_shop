@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { baseURl, getProductDetails } from "../../../../utils/apiClient";
+import { baseURL, getProductDetails } from "../../../../utils/apiClient";
 import { useParams } from "next/navigation";
 import { paiseToRupee } from "../../../../utils/calculation";
 

@@ -1,7 +1,4 @@
 {
-  "/(auth)/forgot_password/page": "app/(auth)/forgot_password/page.js",
   "/(auth)/login/page": "app/(auth)/login/page.js",
-  "/(auth)/signup/page": "app/(auth)/signup/page.js",
-  "/(mainLayout)/page": "app/(mainLayout)/page.js",
-  "/_not-found/page": "app/_not-found/page.js"
+  "/(mainLayout)/page": "app/(mainLayout)/page.js"
 }

@@ -2,7 +2,7 @@
 import { useRouter } from "next/navigation";
 import { useGlobalContext } from "../../../context/GlobalContext";
 import { setCookie } from "../../../utils/cookies";
-import { login } from "../../../utils/apiClient";
+import { apiClient } from "../../../utils/apiClient";
 import Link from "next/link";
 import { Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
@@ -28,9 +28,7 @@ const LoginPage = () => {
     console.log("You are Log in Now");
 
     try {
-      const res = await login({ email, password });
-      const data = await res.json();
-      console.log(data);
+      const data = await apiClient.login({ email, password });
       if (data.error) {
         alert(data.message);
         return;
