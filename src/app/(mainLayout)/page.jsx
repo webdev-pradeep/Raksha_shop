@@ -41,7 +41,7 @@ const HomePage = () => {
     <div>
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {products.map((product) => (
-          <ProductCard product={product} />
+          <ProductCard product={product} key={product.id} />
         ))}
       </div>
       <button onClick={getProfile}>Get My Profile</button>
