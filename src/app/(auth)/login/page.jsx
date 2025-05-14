@@ -7,6 +7,11 @@ import Link from "next/link";
 import { Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
 
+import {
+  validateEmail,
+  validatePassword,
+} from "../../../utils/validateFormFields";
+
 const LoginPage = () => {
   const router = useRouter();
   const { setIsLogin } = useGlobalContext();
@@ -26,16 +31,6 @@ const LoginPage = () => {
       return true;
     }
     return false;
-  };
-
-  const validateEmail = (email) => {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(email);
-  };
-
-  const validatePassword = (password) => {
-    const re = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
-    return re.test(password);
   };
 
   const handleLogin = async (e) => {
