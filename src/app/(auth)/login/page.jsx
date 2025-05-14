@@ -61,6 +61,7 @@ const LoginPage = () => {
       const data = await apiClient.login({ email, password });
       if (data.error) {
         setError(data.message);
+        setIsLoading(false);
         return;
       }
 
