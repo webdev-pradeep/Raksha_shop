@@ -10,6 +10,7 @@ const Navbar = () => {
     deleteCookie("access_token");
     deleteCookie("refresh_token");
     setIsLogin(false);
+    window.location.reload();
   };
 
   return (
