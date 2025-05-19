@@ -3,13 +3,14 @@ import Link from "next/link";
 import { apiClient } from "../../../../utils/apiClient";
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
+import { useGlobalContext } from "../../../../context/GlobalContext";
 
 const catLayout = ({ children }) => {
   const { cat_slug } = useParams();
   const [loading, setLoading] = useState(true);
   const [category, setCategory] = useState({});
   const [attributes, setAttributes] = useState([]);
-  const [categories, setCategories] = useState([]);
+  const { categories } = useGlobalContext();
 
   const fetchCatAttributes = async (id) => {
     setLoading(true);
@@ -49,29 +50,8 @@ const catLayout = ({ children }) => {
     }
   };
 
-  const fetchCategories = async () => {
-    setLoading(true);
-    try {
-      const data = await apiClient.fetchCategories();
-
-      if (data.error) {
-        alert(data.message);
-        setLoading(false);
-        return;
-      }
-      console.log(data);
-      setCategories(data);
-      setLoading(false);
-    } catch (error) {
-      console.log(error);
-      setLoading(false);
-      alert("Something went wrong");
-    }
-  };
-
   useEffect(() => {
     getCategoryDetails(cat_slug);
-    fetchCategories();
   }, []);
 
   return (
