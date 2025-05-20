@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { apiClient } from "../../../utils/apiClient";
 import { useRouter } from "next/navigation";
-import { validateEmail } from "../../../utils/validateFormFields";
+import { validateEmail } from "../../../utils/ValidateFormFields";
 
 const ForgotPasswordPage = () => {
   const router = useRouter();
@@ -54,10 +54,10 @@ const ForgotPasswordPage = () => {
     }
   };
   return (
-    <div className="h-screen w-full flex justify-center items-center">
+    <div className="h-screen w-full flex justify-center items-center bg-gradient-to-l from-red-400 to-pink-300">
       <form
         onSubmit={handleForgotPassword}
-        className="max-w-sm w-full rounded border border-gray-400 grid gap-2 p-4"
+        className="max-w-sm w-full rounded border-3 border-white/70 grid gap-2 p-4"
       >
         <h1 className="text-center font-semibold text-3xl">Forgot Password</h1>
         {error && (

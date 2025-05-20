@@ -10,7 +10,7 @@ import { useState } from "react";
 import {
   validateEmail,
   validatePassword,
-} from "../../../utils/validateFormFields";
+} from "../../../utils/ValidateFormFields";
 
 const LoginPage = () => {
   const router = useRouter();

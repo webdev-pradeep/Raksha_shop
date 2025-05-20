@@ -4,7 +4,7 @@ import { useGlobalContext } from "../../../context/GlobalContext";
 import Link from "next/link";
 import { useState } from "react";
 import { apiClient } from "../../../utils/apiClient";
-import { validateEmail } from "../../../utils/validateFormFields";
+import { validateEmail } from "../../../utils/ValidateFormFields";
 
 const SignupPage = () => {
   const router = useRouter();

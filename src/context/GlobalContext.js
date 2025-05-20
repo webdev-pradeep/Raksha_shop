@@ -77,7 +77,7 @@ export const GlobalContextProvider = ({ children }) => {
         alert(data.message);
         return;
       }
-      console.log(data);
+      // console.log(data);
       setCategories(data);
     } catch (error) {
       console.log(error);

@@ -1,3 +1,5 @@
+import { getCookie } from "./cookies";
+
 export const baseURL = "https://api.store.inflection.org.in";
 
 // fetch client is a wrapper around the fetch API that adds default headers and options to the request.
