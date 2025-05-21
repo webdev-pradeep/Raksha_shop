@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://D%3A/react-project/next-js_project/raksha_shop/src/app/%28pages%29/auth/signup/layout.tsx"],"sourcesContent":["import React from 'react'\r\n\r\nconst layout = ({children}) => {\r\n  return (\r\n    <div className='flex'>\r\n          <div>{children}</div>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default layout\r\n"],"names":[],"mappings":";;;;;AAEA,MAAM,SAAS,CAAC,EAAC,QAAQ,EAAC;IACxB,qBACE,8OAAC;QAAI,WAAU;kBACT,cAAA,8OAAC;sBAAK;;;;;;;;;;;AAGhB;uCAEe","debugId":null}}]
-}

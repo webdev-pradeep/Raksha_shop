@@ -41,17 +41,17 @@ const HomePage = () => {
   return (
     <>
       <div>
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
           {products.map((product) => (
             <ProductCard product={product} key={product.id} />
           ))}
         </div>
 
-        <div>
-          <h3 className="text-2xl font-semibold">Categories</h3>
-          <ul className="list-disc">
+        <div className="m-5 p-5 shadow-2xl shadow-black  grid-cols-1  text-center ">
+          <h3 className="text-3xl font-bold ">Categories</h3>
+          <ul className=" list-none ">
             {categories.map((category) => (
-              <li key={category.id} className="text-lg">
+              <li key={category.id} className="text-lg ">
                 <Link
                   href={`/categories/${category.slug}`}
                   className="text-blue-500 hover:underline"
