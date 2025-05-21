@@ -57,7 +57,7 @@ const Navbar = () => {
             <Popover className="relative">
               <PopoverButton>
                 <div className="h-10 w-10 rounded-full bg-gray-300 flex justify-center items-center text-2xl font-semibold text-gray-800 cursor-pointer">
-                  {userProfile?.full_name[0].toUpperCase()}
+                  {userProfile?.full_name[0].toUpperCase()}D
                 </div>
               </PopoverButton>
               <PopoverBackdrop

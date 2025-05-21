@@ -1,4 +1,6 @@
 {
+  "/(mainLayout)/cart/page": "app/(mainLayout)/cart/page.js",
+  "/(mainLayout)/categories/[cat_slug]/page": "app/(mainLayout)/categories/[cat_slug]/page.js",
   "/(mainLayout)/page": "app/(mainLayout)/page.js",
   "/_not-found/page": "app/_not-found/page.js"
 }
