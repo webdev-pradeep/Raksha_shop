@@ -1,5 +1,5 @@
 "use client";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter, useSearchParams } from "next/navigation";
 import { useGlobalContext } from "../../../context/GlobalContext";
 import { setCookie } from "../../../utils/cookies";
 import { apiClient } from "../../../utils/apiClient";
@@ -15,6 +15,9 @@ import {
 const LoginPage = () => {
   const router = useRouter();
   const { setIsLogin } = useGlobalContext();
+  const searchParams = useSearchParams();
+  console.log(searchParams.get("ref"));
+
   const [isLoading, setIsLoading] = useState(false);
   const [isPassword, setIsPassword] = useState(true);
 
@@ -95,7 +98,11 @@ const LoginPage = () => {
       setValidationError({ email: "", password: "" });
       setError("");
       setIsLoading(false);
-      router.push("/", { replace: true });
+      if (searchParams.get("ref")) {
+        router.push(searchParams.get("ref"), { replace: true });
+      } else {
+        router.push("/", { replace: true });
+      }
     } catch (error) {
       console.log(error);
       setIsLoading(false);

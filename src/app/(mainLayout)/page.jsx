@@ -1,6 +1,6 @@
 "use client";
 
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ProductCard from "../../components/Card";
 import { apiClient } from "../../utils/apiClient";
 import Link from "next/link";
@@ -11,6 +11,7 @@ const HomePage = () => {
   const [loading, setLoading] = useState(true);
 
   const { categories } = useGlobalContext();
+
   const fetchProducts = async () => {
     setLoading(true);
     try {
