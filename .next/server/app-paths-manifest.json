@@ -1,5 +1,15 @@
 {
-  "/(auth)/login/page": "app/(auth)/login/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/(auth)/signup/page": "app/(auth)/signup/page.js",
+  "/(mainLayout)/cart/page": "app/(mainLayout)/cart/page.js",
+  "/account/orders/page": "app/account/orders/page.js",
+  "/account/orders/[orderid]/page": "app/account/orders/[orderid]/page.js",
+  "/account/page": "app/account/page.js",
   "/(mainLayout)/page": "app/(mainLayout)/page.js",
-  "/_not-found/page": "app/_not-found/page.js"
+  "/account/wishlist/page": "app/account/wishlist/page.js",
+  "/(auth)/login/page": "app/(auth)/login/page.js",
+  "/(mainLayout)/product/[slug]/page": "app/(mainLayout)/product/[slug]/page.js",
+  "/(auth)/forgot_password/page": "app/(auth)/forgot_password/page.js",
+  "/(auth)/reset_password/[token]/page": "app/(auth)/reset_password/[token]/page.js",
+  "/(mainLayout)/categories/[cat_slug]/page": "app/(mainLayout)/categories/[cat_slug]/page.js"
 }
