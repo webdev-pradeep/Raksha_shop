@@ -3,11 +3,10 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { getCookie, setCookie } from "../utils/cookies";
 import { apiClient } from "../utils/apiClient";
-import { useRouter } from "next/navigation";
+
 const GlobalContext = createContext();
 
 export const GlobalContextProvider = ({ children }) => {
-  const router = useRouter();
   const [cart, setCart] = useState([]);
   const [userProfile, setUserProfile] = useState(null);
   const [categories, setCategories] = useState([]);

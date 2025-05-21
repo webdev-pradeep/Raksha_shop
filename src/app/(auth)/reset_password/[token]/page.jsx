@@ -2,7 +2,7 @@
 import { useParams, useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { apiClient } from "../../../../utils/apiClient";
-import { validatePassword } from "../../../../utils/validateFormFields";
+import { validatePassword } from "@/utils/ValidateFormFields";
 
 const ResetPasswordPage = () => {
   const router = useRouter();
